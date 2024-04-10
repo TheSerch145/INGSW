@@ -1,0 +1,30 @@
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\appsettings.Development.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\appsettings.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\Formu-Listos ATM.staticwebassets.runtime.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\Formu-Listos ATM.exe
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\Formu-Listos ATM.deps.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\Formu-Listos ATM.runtimeconfig.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\Formu-Listos ATM.dll
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\bin\Debug\net8.0\Formu-Listos ATM.pdb
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.AssemblyInfoInputs.cache
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.AssemblyInfo.cs
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.csproj.CoreCompileInputs.cache
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.MvcApplicationPartsAssemblyInfo.cache
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.RazorAssemblyInfo.cache
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.RazorAssemblyInfo.cs
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets.build.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets.development.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets\msbuild.Formu-Listos ATM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets\msbuild.build.Formu-Listos ATM.props
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Formu-Listos ATM.props
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Formu-Listos ATM.props
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\staticwebassets.pack.json
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\scopedcss\bundle\Formu-Listos ATM.styles.css
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\scopedcss\projectbundle\Formu-Listos ATM.bundle.scp.css
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.dll
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\refint\Formu-Listos ATM.dll
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.pdb
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\Formu-Listos ATM.genruntimeconfig.cache
+D:\UNI\SEMESTRE 2024A\Seminario de ing. de software\INGSW\Formu-Listos ATM\Formu-Listos ATM\obj\Debug\net8.0\ref\Formu-Listos ATM.dll
