@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cOtXPwwnF2LqsbXhp6pYChW6UW/sMpKvQuXba1BKfsa2bVHrmlLXYLJJXK+qSVA4iabCsGGogTOkPU7DJ7YTVw==",
+  "dgSpecHash": "XxRXdNXxUS/4Xvl0DvBB9SrWRt1VwTQok5M25E5vDCsr72lZch59Pl715CczZyLJ0LjEJ4b/hkH6AJcgikx+0A==",
   "success": true,
   "projectFilePath": "D:\\UNI\\SEMESTRE 2024A\\Seminario de ing. de software\\INGSW\\Formu-Listos ATM\\Formu-Listos ATM\\Formu-Listos ATM.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sergi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
