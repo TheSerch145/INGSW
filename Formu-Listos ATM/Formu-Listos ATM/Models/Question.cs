@@ -1,4 +1,6 @@
-﻿namespace Formu_Listos_ATM.Models
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace Formu_Listos_ATM.Models
 {
 	public class Question
 	{
@@ -17,7 +19,9 @@
 		public int IsRequired { get; set; }
 
 		public int OptionID{ get; set; }
-		public List<CatalogValue>? Options { get; set; }
+		public string OptionValue{ get; set; }
+		public bool OptionBool { get; set; } = false;
+        public List<CatalogValue>? Options { get; set; }
 
 		public bool needGraphed { get; set; }
 	}

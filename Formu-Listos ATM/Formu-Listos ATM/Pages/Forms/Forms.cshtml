@@ -1,0 +1,26 @@
+﻿@page
+@model Formu_Listos_ATM.Pages.Campaigns.FormsModel
+@{
+}
+<h1>Forms</h1>
+
+<div class="row">
+    @foreach (var form in Model.formsList)
+    {
+        <div class="col-4 mb-3">
+            <div class="card newCardsBorder-dark p-0">
+                <div class="card-header">
+                    <h3>@form.FormTitle</h3>
+                </div>
+                <div class="card-body m-0 overflow-auto">
+                    <span>@form.FormDescription</span>
+                </div>
+                <div class="card-footer d-flex justify-content-end bg-">
+                    <a asp-page="Form" asp-route-FormId="@form.FormularioId" class="btn btn-primary">Contestar encuesta</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+

@@ -1,0 +1,58 @@
+﻿@page
+@model Formu_Listos_ATM.Pages.Forms.FormsAdministrationModel
+@{
+}
+<div class="row">
+    <form asp-page="FormsAdministration" method="post">
+        <div class="card p-0 ">
+            <div class="card-header newCardsBorder-primary border-primary">
+                <h1>Administracion de Formularios</h1>
+            </div>
+            <div class="card-body">
+                <div class="mb-3 row">
+                    <label asp-for="formsFilter.FormTitle" class="col-2 col-form-label"></label>
+                    <div class="col-4 m-2">
+                        <input type="text" class="form-control" asp-for="formsFilter.FormTitle">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <div>
+                    <button class="btn btn-primary">Buscar</button>
+                    <button class="btn btn-secondary">Reiniciar</button>
+                </div>
+                <a asp-page="formsMaintenance" class="btn btn-success">Agregar nueva formulario</a>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row mt-3 pt-3 bg-light">
+    @foreach (var form in Model.FormsList)
+    {
+        <div class="col-lg-4 col-md-12 mb-3">
+            <div class="card newCardsBorder-dark p-0">
+                <div class="card-header">
+                    <h3>@form.FormTitle</h3>
+                </div>
+                <div class="card-body m-0 overflow-auto">
+                    <span>@form.FormDescription</span>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-">
+                    <a asp-page="FormsMaintenance" asp-route-FormId="@form.FormularioId" class="btn btn-secondary">Editar Formulario</a>
+                    <a asp-page="Form" asp-route-FormId="@form.FormularioId" class="btn btn-primary">Contestar encuesta</a>
+                </div>
+            </div>
+        </div>
+
+    }
+    @if (Model.FormsList.Count() == 0)
+    {
+        <div class="col-12 pt-5 pb-5">
+            <div class="card newCardsBorder-dark p-0 text-center p2">
+                <h3>No Hay resultados</h3>
+
+            </div>
+        </div>
+
+    }
+</div>

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration _configuration
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,8 +8,13 @@
     <title>@ViewData["Title"] - Formu_Listos_ATM</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Formu_Listos_ATM.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/Formu_Listos_ATM.styles.css" asp-append-version="true" /> *@
 </head>
+@{
+    var role = _configuration.GetValue<string>("Credentials:Role");
+    var userName = _configuration.GetValue<string>("Credentials:Name");
+    var userValidated = _configuration.GetValue<bool>("Credentials:UserValidated");
+}
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -17,15 +24,45 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+
+                    @if (userValidated)
+                    {
+                        <div class="justify-content-end bg-light d-flex">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hola @userName !
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" asp-page="/Campaigns/Campaigns">Ver Campañas</a></li>
+                                        <li><a class="dropdown-item" asp-page="/Forms/Forms">Ver Formularios</a></li>
+
+                                        @if (role == "Admin")
+                                        {
+                                            <li><a class="dropdown-item" asp-page="/Campaigns/CampaignsAdministration">Administrar Campañas</a></li>
+                                            <li><a class="dropdown-item" asp-page="/Forms/FormsAdministration">Administrar Formularios</a></li>
+                                        }
+
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-page="LogOut" asp-route-logout="1">Cerrar Sesion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-page="/Login/Login">Login</a>
+                            </li>
+                        </ul>
+                    }
+
+
+
                 </div>
             </div>
         </nav>
@@ -36,11 +73,11 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Formu_Listos_ATM - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    @*  <footer class="border-top footer text-muted bg-light ">
+    <div class="container h-100">
+    &copy; 2024 - Formu_Listos_ATM - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+    </footer> *@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -49,3 +86,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

@@ -1,0 +1,36 @@
+﻿@page
+@model Formu_Listos_ATM.Pages.Campaigns.CampaignsModel
+@{
+}
+<h1>Campañas</h1>
+
+<div class="row">
+    @foreach (var campaign in Model.CampaignsList)
+    {
+        <div class="col-lg-6 col-md-12 mb-3">
+            <div class="card newCardsBorder-dark p-0">
+                <div class="card-title">
+                    <h3>@campaign.CampannaFullTitle</h3>
+                </div>
+                <div class="card-body m-0">
+                    <span> @campaign.Description</span>
+                </div>
+                <div class="card-footer d-flex justify-content-between ">
+                    <a class="btn btn-secondary">Editar campaña</a>
+                    <a asp-page="/Forms/Forms" asp-route-campaignId="@campaign.CampannaId" class="btn btn-primary">Ver formularios</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (Model.CampaignsList.Count() == 0)
+    {
+        <div class="col-12 pt-5 pb-5">
+            <div class="card newCardsBorder-dark p-0 text-center p2">
+                <h3>No tienes campañas registradas</h3>
+
+            </div>
+        </div>
+
+    }
+</div>
