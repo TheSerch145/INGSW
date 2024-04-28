@@ -1,1 +1,112 @@
-﻿
+﻿@using Formu_Listos_ATM.Models
+@model QuestionSharedPage
+
+<!-- Modal -->
+<form asp-controller="">
+    <div class="modal fade" id="QuestionModal" tabindex="-1" data-bs-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Preguntas</h5>
+                    <button type="button" class="btn-close CloseButtonModal" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @foreach (var question in Model.questions)
+                    {
+                        <div class="mt-2 mb-2 border border-1 p-2">
+                            <label><strong>@question.Value.QuestionTitle</strong></label>
+                            <div class="mb-3 row">
+                                <label asp-for="questions[question.Key].QuestionTitle" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" asp-for="questions[question.Key].QuestionTitle">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label asp-for="questions[question.Key].QuestionDescription" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" asp-for="questions[question.Key].QuestionDescription">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label asp-for="questions[question.Key].QuestionTypeId" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" asp-for="questions[question.Key].QuestionTypeId">
+                                        <option value="1">Texto</option>
+                                        <option value="2">Select</option>
+                                        <option value="3">Number</option>
+                                        <option value="4">CheckBox</option>
+                                        <option value="5">Email</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label asp-for="questions[question.Key].ValidatorMessage" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" asp-for="questions[question.Key].ValidatorMessage">
+                                </div>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" asp-for="questions[question.Key].IsRequired">
+                                <label asp-for="questions[question.Key].IsRequired" class="col-sm-3 col-form-label"></label>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label asp-for="questions[question.Key].QuestionTypeId" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" asp-for="questions[question.Key].QuestionTypeId">
+                                        <option value="0">Seleccionar</option>
+                                        <option value="1">Texto</option>
+                                        <option value="2">Select</option>
+                                        <option value="3">Number</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" asp-for="questions[question.Key].needGraphed">
+                                <label asp-for="questions[question.Key].needGraphed" class="col-sm-3 col-form-label"></label>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Agregar Pregunta</button>
+                    <button type="button" class="btn btn-secondary CloseButtonModal" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        // Modal
+        // $('#QuestionModal').modal(
+        //     {
+        //         backdrop: 'static',
+        //         keyboard: false,
+        //         focus: true,
+        //         show: true
+        //     });
+
+        var myModal = new bootstrap.Modal(document.getElementById('QuestionModal'), {
+            keyboard: false
+        })
+        myModal.show();
+
+        // Close button modal
+        $(".CloseButtonModal").on("click",
+            function (e) {
+                $("#Questions").html("");
+            });
+
+    });
+
+</script>

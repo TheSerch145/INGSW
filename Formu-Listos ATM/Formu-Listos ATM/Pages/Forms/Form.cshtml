@@ -51,9 +51,10 @@
                 }
                 @if (question.QuestionTypeId == 5)
                 {
+                    // Email
                     <input class="form-control" asp-for="Answers[question.QuestionID].answerData" type="email" />
                 }
-                <span asp-validation-for="@question.OptionValue"></span>
+                <span hidden>@question.ValidatorMessage</span>
 
 
             </div>

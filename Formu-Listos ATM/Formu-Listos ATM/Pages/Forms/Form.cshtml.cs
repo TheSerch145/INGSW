@@ -22,7 +22,7 @@ namespace Formu_Listos_ATM.Pages.Forms
                     QuestionDescription = $"Descripción de la pregunta {i}",
                     Sort = i,
                     QuestionTitle = $"Pregunta {i}",
-                    IsRequired = 1, 
+                    IsRequired = true, 
                     needGraphed = false 
                 };
                 Answers.Add(question.QuestionID, new Answer());

@@ -1,0 +1,140 @@
+﻿@page
+@model Formu_Listos_ATM.Pages.Graph.GraphModel
+@{
+}
+<div class="container">
+    <div class="row d-flex">
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Campaña</label>
+            <div class="col-sm-10">
+                <select class="form-select">
+                    <option>Campaña 1</option>
+                    <option>Campaña 2</option>
+                    <option>Campaña 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 card bg-light"><canvas id="1"></canvas></div>
+        <div class="col-4 card bg-light"><canvas id="2"></canvas></div>
+        <div class="col-4 card bg-light"><canvas id="3"></canvas></div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        var colors = [
+            'rgba(255, 99, 132, 0.8)',
+            'rgba(255, 159, 64, 0.8)',
+            'rgba(255, 205, 86, 0.8)',
+            'rgba(75, 192, 192, 0.8)',
+            'rgba(54, 162, 235, 0.8)',
+            'rgba(153, 102, 255, 0.8)',
+            'rgba(201, 203, 207, 0.8)'
+        ];
+
+
+        const ctx1 = $("#1")
+        const ctx2 = $("#2")
+        const ctx3 = $("#3")
+
+        new Chart(
+            document.getElementById('1'),
+            {
+                type: 'pie',
+                data: {
+                    labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+                    datasets: [{
+                        label: '',
+                        data: [1, 5, 8, 10, 3],
+                        backgroundColor: colors,
+                        borderWidth: 1
+                    }]
+                },
+
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Pregunta 1'
+                        }
+                    }
+                }
+            }
+        );
+
+        new Chart(
+            document.getElementById('2'),
+            {
+                type: 'pie',
+                data: {
+                    labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+                    datasets: [{
+                        label: '',
+                        data: [12, 5, 13, 4, 30],
+                        backgroundColor: colors,
+                        borderWidth: 1
+                    }]
+                },
+
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Pregunta 2'
+                        }
+                    }
+                }
+            }
+        );
+
+        new Chart(
+            document.getElementById('3'),
+            {
+                type: 'pie',
+                data: {
+                    labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+                    datasets: [{
+                        label: '',
+                        data: [1, 20, 5, 3, 1],
+                        backgroundColor: colors,
+                        borderWidth: 1
+                    }]
+                },
+
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Pregunta 3'
+                        }
+                    }
+                }
+            }
+        );
+
+
+
+    });
+
+
+</script>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Formu-Listos ATM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad809104f594a5ced4ceae1dd923518ddc6b1113")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1480327fb936e8715273603761d703d775e7b43")]
 [assembly: System.Reflection.AssemblyProductAttribute("Formu-Listos ATM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Formu-Listos ATM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

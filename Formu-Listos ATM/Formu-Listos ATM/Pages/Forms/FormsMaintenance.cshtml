@@ -7,52 +7,69 @@
     <div class="card-header">
         <h1>Forms Maintenance</h1>
 
+        <div class="row bg-light ps-1 pe-1">
+            <div class="d-flex justify-content-end">
+                <button type="button" onclick="SeeQuestions()" class="btn btn-primary"> Ver Preguntas</button>
+            </div>
+        </div>
     </div>
-    <form method="post">
+    <form method="post" id="Form-Maitenance" data-FormId="@Model.FormsMaintenance.FormularioId">
         <div class="card-body">
             <div class="mb-3">
-                <label asp-for="formsMaintenance.FormTitle" class="form-label"></label>
-                <input asp-for="formsMaintenance.FormTitle" class="form-control" />
-                <span asp-validation-for="formsMaintenance.FormTitle" class="text-danger"></span>
+                <label asp-for="FormsMaintenance.FormTitle" class="form-label"></label>
+                <input asp-for="FormsMaintenance.FormTitle" class="form-control" />
+                <span asp-validation-for="FormsMaintenance.FormTitle" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="formsMaintenance.FormDescription" class="form-label"></label>
-                <textarea asp-for="formsMaintenance.FormDescription" class="form-control"></textarea>
-                <span asp-validation-for="formsMaintenance.FormDescription" class="text-danger"></span>
+                <label asp-for="FormsMaintenance.FormDescription" class="form-label"></label>
+                <textarea asp-for="FormsMaintenance.FormDescription" class="form-control"></textarea>
+                <span asp-validation-for="FormsMaintenance.FormDescription" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="formsMaintenance.FormNote" class="form-label"></label>
-                <textarea asp-for="formsMaintenance.FormNote" class="form-control"></textarea>
-                <span asp-validation-for="formsMaintenance.FormNote" class="text-danger"></span>
+                <label asp-for="FormsMaintenance.FormNote" class="form-label"></label>
+                <textarea asp-for="FormsMaintenance.FormNote" class="form-control"></textarea>
+                <span asp-validation-for="FormsMaintenance.FormNote" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="formsMaintenance.Vigencia" class="form-label"></label>
-                <input asp-for="formsMaintenance.Vigencia" class="form-control" />
-                <span asp-validation-for="formsMaintenance.Vigencia" class="text-danger"></span>
+                <label asp-for="FormsMaintenance.Vigencia" class="form-label"></label>
+                <input asp-for="FormsMaintenance.Vigencia" class="form-control" />
+                <span asp-validation-for="FormsMaintenance.Vigencia" class="text-danger"></span>
             </div>
             <div class="row">
-                <div class="mb-3 col-6">
-                    <label asp-for="formsMaintenance.DateStart" class="form-label"></label>
-                    <input asp-for="formsMaintenance.DateStart" class="form-control" />
-                    <span asp-validation-for="formsMaintenance.DateStart" class="text-danger"></span>
+                <div class="col-12">
+                    <label asp-for="FormsMaintenance.DateStart" class="form-label"></label>
                 </div>
                 <div class="mb-3 col-6">
-                    <label asp-for="formsMaintenance.DateEnd" class="form-label"></label>
-                    <input asp-for="formsMaintenance.DateEnd" class="form-control" />
-                    <span asp-validation-for="formsMaintenance.DateEnd" class="text-danger"></span>
+                    <input asp-for="FormsMaintenance.DateStart" class="form-control" />
+                    <span asp-validation-for="FormsMaintenance.DateStart" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <input asp-for="FormsMaintenance.DateEnd" class="form-control" />
+                    <span asp-validation-for="FormsMaintenance.DateEnd" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" asp-for="formsMaintenance.IsActive" class="form-check-input" />
-                <label asp-for="formsMaintenance.IsActive" class="form-check-label"></label>
+                <input type="checkbox" asp-for="FormsMaintenance.IsActive" class="form-check-input" />
+                <label asp-for="FormsMaintenance.IsActive" class="form-check-label"></label>
             </div>
         </div>
         <div class="card-footer d-flex justify-content-between">
 
-            <a asp-page="FormsAdministration"  class="btn btn-secondary">Cancel</a>
+            <a asp-page="FormsAdministration" class="btn btn-secondary">Cancel</a>
             <button type="submit" class="btn btn-primary">Save</button>
 
         </div>
+
+        <div id="Questions"></div>
     </form>
 
+
 </div>
+
+<script>
+    function SeeQuestions() {
+        var FormId = $("#Form-Maitenance").data("FormId");
+        $('#Questions').load('FormsMaintenance?handler=Questions&FormID=' + FormId);
+
+    }
+</script>
